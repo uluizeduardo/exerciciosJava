@@ -17,7 +17,5 @@ public class Program {
 
         //Saída de dados
         System.out.printf("O total em Reais é = %.2f", ConversorDeMoedas.cotacao());
-
-
     }
 }
