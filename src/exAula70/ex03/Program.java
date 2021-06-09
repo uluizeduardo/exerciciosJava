@@ -14,7 +14,7 @@ public class Program {
 
         //Entrada de dados
         System.out.println("Informe o nome do aluno: ");
-        aluno.nome = scan.next();
+        aluno.nome = scan.nextLine();
         System.out.println("Informe a nota1: ");
         aluno.n1 = scan.nextDouble();
         //Condicional  para verificar se a nota1 é maior que 30

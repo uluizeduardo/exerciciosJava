@@ -14,7 +14,7 @@ public class Program {
 
         //Entrada de dados
         System.out.println("Imforme o nome do funcionário: ");
-        funcionario.nome = scan.next();
+        funcionario.nome = scan.nextLine();
         System.out.println("Informe o salário bruto do funcionário: ");
         funcionario.salarioBruto = scan.nextDouble();
         System.out.println();
