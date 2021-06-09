@@ -30,9 +30,18 @@ public class Program {
         //Saída de dados
         System.out.println("Quartos ocupados: ");
         //For para pegar os dados do vetor
+
+        /* For normal
         for (int i = 0; i < vet.length; i++) {
             if (vet[i] != null){
                 System.out.println(vet[i]);
+            }
+        }*/
+
+        // For each, Sintaxe simplificada para percorrer a coleção (vetor)
+        for (Estudantes obj: vet) {
+            if (obj != null){
+                System.out.println(obj);
             }
         }
     }
