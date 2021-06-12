@@ -61,6 +61,8 @@ public class Worker {
     public void removeContract(HourContract contract){
         contracts.remove(contract);
     }
+
+    //Método para calcular a renda
     public double income(int year, int month){
         double soma = baseSalary;
         Calendar cal = Calendar.getInstance();
