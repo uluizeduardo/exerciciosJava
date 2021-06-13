@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Order {
 
-    public static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     //Variável
     private Date moment;
