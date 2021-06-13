@@ -35,6 +35,14 @@ public class OrderItem {
         this.price = price;
     }
 
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
     //Método para calacular o subTotal
     public Double subTotal(){
         return quantity * price;

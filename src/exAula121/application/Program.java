@@ -34,7 +34,7 @@ public class Program {
         //Entrada de dados
         System.out.println("Enter order data: ");
         System.out.print("Status: ");
-        OrderStatus status = OrderStatus.valueOf(scan.next());
+        OrderStatus status = OrderStatus.valueOf(scan.next().toUpperCase());
 
         //Instância da classe Order para gravar os dados a cima através do construtor
         Order order = new Order(new Date(), status, client);

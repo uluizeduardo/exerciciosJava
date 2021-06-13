@@ -16,7 +16,7 @@ public class Order {
 
     //Associação
     private OrderStatus status;
-    private List<OrderItem> items = new ArrayList<>();
+    private List<OrderItem> items = new ArrayList<OrderItem>();
     private Client client;
 
     //Contrutores, padão e com argumentos
@@ -43,6 +43,14 @@ public class Order {
 
     public void setStatus(OrderStatus status) {
         this.status = status;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     //Métodos para add e remover item na OrderItem
