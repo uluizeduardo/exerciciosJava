@@ -7,6 +7,7 @@ public class OrderItem {
     //Associaçõa
     private Product product;
 
+    //Construtores, padrão e com argumentos
     public OrderItem(){
 
     }
@@ -17,6 +18,7 @@ public class OrderItem {
         this.product = product;
     }
 
+    //Getter e setter
     public Integer getQuantity() {
         return quantity;
     }
@@ -33,10 +35,12 @@ public class OrderItem {
         this.price = price;
     }
 
+    //Método para calacular o subTotal
     public Double subTotal(){
         return quantity * price;
     }
 
+    //ToString de saída de dados
     @Override
     public String toString(){
         return product.getName()

@@ -8,10 +8,13 @@ import java.util.Date;
 public class Client {
 
     private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+    //Variáveis
     private String name;
     private String email;
     private Date birthDate;
 
+    //Construtores, padrão e com argumentos
     public Client(){
 
     }
@@ -22,6 +25,7 @@ public class Client {
         this.birthDate = birthDate;
     }
 
+    //Getter e setter
     public String getName() {
         return name;
     }
@@ -46,6 +50,7 @@ public class Client {
         this.birthDate = birthDate;
     }
 
+    //ToString de saída de dados
     @Override
     public String toString(){
         return name + " (" + sdf.format(birthDate) + ") - " + email;

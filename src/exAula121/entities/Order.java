@@ -9,14 +9,17 @@ import java.util.List;
 
 public class Order {
 
-    public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    public static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+    //Variável
     private Date moment;
-    private OrderStatus status;
 
     //Associação
+    private OrderStatus status;
     private List<OrderItem> items = new ArrayList<>();
     private Client client;
 
+    //Contrutores, padão e com argumentos
     public Order(){
     }
     public Order(Date moment, OrderStatus status, Client client) {
@@ -25,6 +28,7 @@ public class Order {
         this.client = client;
     }
 
+    //Getter e setter
     public Date getMoment() {
         return moment;
     }
@@ -41,6 +45,7 @@ public class Order {
         this.status = status;
     }
 
+    //Métodos para add e remover item na OrderItem
     public void addItem(OrderItem item){
         items.add(item);
     }
@@ -48,7 +53,7 @@ public class Order {
         items.remove(item);
     }
 
-    OrderItem order = new OrderItem();
+    //Método para calcular o total através do subTotal
     public Double total(){
         Double sum = 0.0;
         for (OrderItem item: items){
@@ -57,6 +62,7 @@ public class Order {
         return sum;
     }
 
+    //ToString de saída de dados
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
