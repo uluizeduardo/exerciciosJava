@@ -29,4 +29,13 @@ public class Company extends TaxPayer{
             return getAnualIncome() * 0.14;
         }
     }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(getName());
+        sb.append(" $ ");
+        sb.append(String.format("%.2f ", tax()));
+        return sb.toString();
+    }
 }

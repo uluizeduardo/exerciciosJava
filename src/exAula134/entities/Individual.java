@@ -30,4 +30,13 @@ public class Individual extends TaxPayer{
             return (getAnualIncome() * 0.25) - (healthExpenditures * 0.5);
         }
     }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(getName());
+        sb.append( " $ ");
+        sb.append(String.format("%.2f ", tax()));
+        return sb.toString();
+    }
 }
