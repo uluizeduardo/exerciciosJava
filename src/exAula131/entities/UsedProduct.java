@@ -5,10 +5,13 @@ import java.util.Date;
 
 public class UsedProduct extends Product{
 
+    //Formatação da data
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
+    //Variável
     private Date manufatureDate;
 
+    //Construtores
     public UsedProduct(Date manufatureDate) {
         this.manufatureDate = manufatureDate;
     }
@@ -18,6 +21,7 @@ public class UsedProduct extends Product{
         this.manufatureDate = manufatureDate;
     }
 
+    //Getter e setter
     public Date getManufatureDate() {
         return manufatureDate;
     }
@@ -25,6 +29,7 @@ public class UsedProduct extends Product{
     public void setManufatureDate(Date manufatureDate) {
         this.manufatureDate = manufatureDate;
     }
+    //Método toString
     @Override
     public String priceTag(){
         return getName()

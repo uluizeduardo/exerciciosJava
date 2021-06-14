@@ -1,9 +1,11 @@
 package exAula131.entities;
 
 public class Product {
+    //Variáveis
     private String name;
     private Double price;
 
+    //Construtores, padão e com argumentos
     public Product(){
 
     }
@@ -12,6 +14,7 @@ public class Product {
         this.price = price;
     }
 
+    //Getter e setter
     public String getName() {
         return name;
     }
@@ -28,6 +31,7 @@ public class Product {
         this.price = price;
     }
 
+    //Método toString
     public String priceTag(){
         return name
                 + " $ "

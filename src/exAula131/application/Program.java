@@ -16,7 +16,7 @@ public class Program {
         Scanner scan = new Scanner(System.in);
         List<Product> list = new ArrayList<>();
 
-
+        //Entrada de dados
         System.out.print("Enter the number of products: ");
         int n = scan.nextInt();
         for (int i = 1; i <= n; i++){
@@ -29,6 +29,7 @@ public class Program {
             System.out.print("Price: ");
             double price = scan.nextDouble();
 
+            //Condicional para verificar resposta de ch
             if (ch == 'I'){
                 System.out.print("Customs fee: ");
                 double customsFree = scan.nextDouble();
@@ -43,6 +44,7 @@ public class Program {
                 System.out.print("Letra inválida");
             }
         }
+        //Saída de dados
         System.out.println();
         System.out.println("PRICE TAGS:");
         for (Product p : list){
