@@ -2,8 +2,10 @@ package exAula134.entities;
 
 public class Company extends TaxPayer{
 
+    //Variável
     private int numberOfEmployees;
 
+    //Construtores
     public Company(int numberOfEmployees) {
         this.numberOfEmployees = numberOfEmployees;
     }
@@ -13,6 +15,7 @@ public class Company extends TaxPayer{
         this.numberOfEmployees = numberOfEmployees;
     }
 
+    //Getter e setter
     public int getNumberOfEmployees() {
         return numberOfEmployees;
     }
@@ -21,6 +24,7 @@ public class Company extends TaxPayer{
         this.numberOfEmployees = numberOfEmployees;
     }
 
+    //Sobrescrição do método abstrato tax
     @Override
     public double tax(){
         if (numberOfEmployees < 10){
@@ -30,6 +34,7 @@ public class Company extends TaxPayer{
         }
     }
 
+    //ToString de saída de dados
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();

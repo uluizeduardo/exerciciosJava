@@ -2,8 +2,10 @@ package exAula134.entities;
 
 public class Individual extends TaxPayer{
 
+    //Variável
     private Double healthExpenditures;
 
+    //Construtores
     public Individual(Double healthExpenditures) {
         this.healthExpenditures = healthExpenditures;
     }
@@ -13,6 +15,7 @@ public class Individual extends TaxPayer{
         this.healthExpenditures = healthExpenditures;
     }
 
+    //Getter e setter
     public Double getHealthExpenditures() {
         return healthExpenditures;
     }
@@ -21,6 +24,7 @@ public class Individual extends TaxPayer{
         this.healthExpenditures = healthExpenditures;
     }
 
+    //Sobrescrição do método abstrato tax
     @Override
     public double tax() {
         if (getAnualIncome() < 2000.00){
@@ -31,6 +35,7 @@ public class Individual extends TaxPayer{
         }
     }
 
+    //ToString de saída de dados
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();

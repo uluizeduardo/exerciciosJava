@@ -14,6 +14,7 @@ public class Program {
 
         List<TaxPayer> list = new ArrayList<>();
 
+        //Entrada de dados
         System.out.print("Enter the number of tax payers: ");
         int n =  scan.nextInt();
         for (int i = 1; i <=n ; i++) {
@@ -27,15 +28,14 @@ public class Program {
             if (ch == 'I'){
                 System.out.print("Health expenditures: ");
                 double healthExpendtures = scan.nextDouble();
-                TaxPayer taxPayerIndividual = new Individual(name, anualIcome, healthExpendtures);
-                list.add(taxPayerIndividual);
+                list.add(new Individual(name, anualIcome, healthExpendtures));
             }else if (ch == 'C'){
                 System.out.print("Number of employees: ");
                 int numberOfEmployees = scan.nextInt();
-                TaxPayer taxPayerCompany = new Company(name, anualIcome, numberOfEmployees);
-                list.add(taxPayerCompany);
+                list.add(new Company(name, anualIcome, numberOfEmployees));
             }
         }
+        //Saída de dados
         double sum = 0.0;
         System.out.println();
         System.out.println("TAXES PAID: ");
