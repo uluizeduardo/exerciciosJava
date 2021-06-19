@@ -1,6 +1,8 @@
 package exAula192.model.servicos;
 
-public class ServicoFiscalDoBrasil implements ServicoDeImposto{
+import exAula192.model.servicos.ServicoDeImposto;
+
+public class ServicoFiscalDoBrasil implements ServicoDeImposto {
 
     public double imposto(double quantia){
         if (quantia <= 100.0){

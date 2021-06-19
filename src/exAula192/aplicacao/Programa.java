@@ -1,9 +1,8 @@
-package exAula192.model.aplicacao;
+package exAula192.aplicacao;
 
 import exAula192.model.entidades.AlugelDeCarro;
 import exAula192.model.entidades.Veiculo;
 import exAula192.model.servicos.ServicoDeAluguel;
-import exAula192.model.servicos.ServicoDeImposto;
 import exAula192.model.servicos.ServicoFiscalDoBrasil;
 
 import java.text.ParseException;
