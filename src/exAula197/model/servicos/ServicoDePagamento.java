@@ -20,10 +20,11 @@ public class ServicoDePagamento {
         for (int i = 1; i <= meses; i++) {
             Date data = addMeses(contrato.getData(), i);
             double atualizacaoDaCotaBasica = cotaBasica + servicoOnlideDePagamento.juroMensal(cotaBasica, i);
-            double cotaTotal = cotaBasica + servicoOnlideDePagamento.juroPorPagamento(atualizacaoDaCotaBasica);
+            double cotaTotal = atualizacaoDaCotaBasica + servicoOnlideDePagamento.juroPorPagamento(atualizacaoDaCotaBasica);
             contrato.addPrestacao(new Prestacao(data, cotaTotal));
         }
     }
+    //Método auxiliar
     private Date addMeses(Date data, int n){
         Calendar cal = Calendar.getInstance();//Instância do calendario
         cal.setTime(data);//setou a data
