@@ -1,5 +1,6 @@
 package exAula206.aplicacao;
 
+import exAula206.entidade.Produto;
 import exAula206.servicos.CalculadoraDeServico;
 
 import java.io.BufferedReader;
@@ -14,7 +15,7 @@ public class Programa {
 
         Locale.setDefault(Locale.US);
 
-        List<Integer> list = new ArrayList<>();
+        List<Produto> list = new ArrayList<>();
 
         String caminho = "/home/luiz/Documentos/in.txt";
 
@@ -22,12 +23,13 @@ public class Programa {
 
             String linha = br.readLine();
             while (linha != null){
-                list.add(Integer.parseInt(linha));
+                String[] campos = linha.split(",");
+                list.add(new Produto(campos[0], Double.parseDouble(campos[1])));
                 linha = br.readLine();
             }
 
-            Integer x = CalculadoraDeServico.max(list);
-            System.out.println("Max: ");
+           Produto x = CalculadoraDeServico.max(list);
+            System.out.println("Mais Caro: ");
             System.out.println(x);
         }
         catch (IOException ex){

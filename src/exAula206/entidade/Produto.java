@@ -1,6 +1,6 @@
 package exAula206.entidade;
 
-public class Produto {
+public class Produto implements Comparable<Produto>{
 
     private String nome;
     private Double preco;
@@ -33,5 +33,10 @@ public class Produto {
     @Override
     public String toString(){
         return nome + ", " + String.format("%.2f", preco);
+    }
+
+    @Override
+    public int compareTo(Produto outro) {
+        return preco.compareTo(outro.getPreco());
     }
 }
