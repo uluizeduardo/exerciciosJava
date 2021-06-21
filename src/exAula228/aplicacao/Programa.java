@@ -1,4 +1,4 @@
-package exAula228;
+package exAula228.aplicacao;
 
 import exAula228.entidades.Produto;
 
